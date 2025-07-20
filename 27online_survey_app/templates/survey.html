@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Take Our Survey</h2>
+
+<form method="POST" class="survey-form">
+    <label for="name">Name:</label><br />
+    <input type="text" name="name" id="name" required /><br /><br />
+
+    <label for="age_group">Age Group:</label><br />
+    <select name="age_group" id="age_group" required>
+        <option value="" disabled selected>Select your age group</option>
+        <option value="Under 18">Under 18</option>
+        <option value="18-25">18-25</option>
+        <option value="26-40">26-40</option>
+        <option value="41-60">41-60</option>
+        <option value="60+">60+</option>
+    </select><br /><br />
+
+    <label for="feedback">Your Feedback:</label><br />
+    <textarea name="feedback" id="feedback" rows="5" required></textarea><br /><br />
+
+    <button type="submit">Submit Survey</button>
+</form>
+{% endblock %}
