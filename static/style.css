@@ -1,0 +1,255 @@
+/* ====== BASE ====== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbeed8;  /* soft sand */
+  color: #5b3a29;             /* warm brown */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* ====== NAVBAR ====== */
+nav {
+  background-color: #a97142; /* rich brown */
+  padding: 15px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  color: #fbeed8;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.nav-link {
+  color: #fbeed8;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-left: 20px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-brand:hover {
+  color: #d7b77a;
+}
+
+/* ====== HEADINGS ====== */
+h1, h2 {
+  color: #8c5e32;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ====== HOME PAGE ====== */
+.welcome-section {
+  text-align: center;
+  margin-top: 80px;
+  padding: 30px 15px;
+  background-color: #fff8e1;
+  border-radius: 10px;
+  box-shadow: 0 3px 18px rgba(171,133,71,0.3);
+  color: #5b3a29;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #7b5a3c;
+}
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #a97142;
+  color: #fbeed8;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(169,113,66,0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: #7e5a2e;
+  box-shadow: 0 6px 15px rgba(126,90,46,0.7);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #f0d8a8;
+  color: #7e5a2e;
+  box-shadow: 0 4px 10px rgba(240,216,168,0.5);
+}
+
+.btn-secondary:hover {
+  background-color: #d7b77a;
+  color: #5b3a29;
+  box-shadow: 0 6px 15px rgba(215,183,122,0.7);
+}
+
+/* ====== FORMS ====== */
+form.survey-form, form.filter-form {
+  background-color: #fff8e1; /* light sand */
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(171,133,71,0.3);
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  color: #7b5a3c;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: 1px solid #d1b68a;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #a97142;
+  box-shadow: 0 0 5px #a97142aa;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #a97142;
+  color: #fbeed8;
+  border: none;
+  padding: 12px 18px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(169,113,66,0.6);
+}
+
+button:hover {
+  background-color: #7e5a2e;
+}
+
+/* ====== RESULTS LIST ====== */
+.response-list {
+  margin-top: 25px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.response-list li {
+  background: #fff7dc;
+  border-left: 6px solid #a97142;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  color: #5b3a29;
+  box-shadow: 1px 1px 5px #d7b77a88;
+  user-select: text;
+}
+
+.response-list strong {
+  font-size: 1.1rem;
+  color: #7b4f25;
+}
+
+/* ====== FILTER FORM ====== */
+.filter-form label {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.filter-form select {
+  width: auto;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #7b5a3c;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-links {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  form.survey-form, form.filter-form {
+    padding: 15px 20px;
+  }
+}

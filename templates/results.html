@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Survey Results</h2>
+
+<form method="GET" action="{{ url_for('results') }}" class="filter-form">
+    <label for="age_group">Filter by Age Group:</label>
+    <select name="age_group" id="age_group" onchange="this.form.submit()">
+        <option value="">All</option>
+        {% for ag in age_groups %}
+        <option value="{{ ag }}" {% if selected_age == ag %}selected{% endif %}>{{ ag }}</option>
+        {% endfor %}
+    </select>
+</form>
+
+{% if responses %}
+<ul class="response-list">
+    {% for r in responses %}
+    <li>
+        <strong>{{ r.name }}</strong> ({{ r.age_group }}) says: <br />
+        <em>{{ r.feedback }}</em>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No survey responses found for this filter.</p>
+{% endif %}
+
+{% endblock %}
